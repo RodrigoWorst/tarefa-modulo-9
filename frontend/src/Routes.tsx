@@ -1,6 +1,7 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import Movie from './pages/Movie';
 
 const Routes = () => {
   return (
@@ -8,7 +9,10 @@ const Routes = () => {
       <Navbar />
       <Switch>
         <Route path="/" exact>
-          <Home/>
+          <Home />
+        </Route>
+        <Route path="/movies" exact>
+          <Movie />
         </Route>
       </Switch>
     </BrowserRouter>
